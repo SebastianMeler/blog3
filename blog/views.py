@@ -2,7 +2,7 @@ from django.core.mail import send_mail
 from django.shortcuts import get_object_or_404, render
 from django.views.generic import ListView
 from blog.forms import EmailPostForm, CommentForm
-from blog.models import Post
+from blog.models import Post, Comment
 
 
 def post_detail(request, year, month, day, post):

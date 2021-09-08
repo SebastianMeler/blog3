@@ -38,8 +38,8 @@ class Post(models.Model):
             "blog:post_detail",
             args=[
                 self.publish.year,
-                self.publish.strftime("%m"),
-                self.publish.strftime("%d"),
+                self.publish.month,
+                self.publish.day,
                 self.slug,
             ],
         )
