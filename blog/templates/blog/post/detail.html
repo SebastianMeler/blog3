@@ -18,6 +18,7 @@
             {{ total_comments }} komentarz{{ total_comments|pluralize:"y" }}
         </h2>
     {% endwith %}
+
     {% for comment in comments %}
         <div class="comment">
             <p class="info">
@@ -34,10 +35,11 @@
         <h2>Twój komentarz został dodany</h2>
     {% else %}
         <h2>Dodaj nowy komentarz</h2>
-        <form action="." method="post">
+        <form method="post">
             {{ comment_form.as_p }}
             {% csrf_token %}
             <p><input type="submit" value="Dodaj komentarz"></p>
         </form>
     {% endif %}
+
 {% endblock %}
